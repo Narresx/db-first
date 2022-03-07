@@ -1,0 +1,68 @@
+
+
+Traccia: Modellizzare la struttura di una tabella per memorizzare tutti i dati riguardanti delle auto usate messe in vendita da un concessionario.
+
+
+<--------------------------------->
+
+
+Automobile: 
+
+Colonne - Tipo di dato - Attributo - (Indice)
+
+
+<--------------------------------->
+
+id - BIGINT - UNIQUE, NOT_NULL, AUTO_INCREMENT - (PRIMARY_KEY);
+
+model - VARCHAR(40) - NOT_NULL;
+
+front_wheel_drive - BOOL || (TINYINT(1)) - NOT_NULL;
+
+rear_wheel_drive - BOOL || (TINYINT(1)) - NOT_NULL;
+
+four_wheel_drive - BOOL || (TINYINT(1)) - NOT_NULL;
+
+production year - YEAR - NOT_NULL;
+
+euro_class -  VARCHAR(2) - NOT_NULL;
+
+frame_number - CHAR(17) - NOT_NULL; (Numero del telaio)
+
+license_plate - VARCHAR(10) - NOT_NULL; (Tra lettere e numeri non penso una targa superi 10 caratteri)
+
+used - BOOL || (TINYINT(1)) - NOT_NULL;
+
+mileage - VARCHAR(7) - NOT_NULL; (Dubito che un'auto superi 9.999.999 km)
+
+previous_owners - VARCHAR() - NOT_NULL; (Dubito che un auto abbia avuto/possa avere più di 255 proprietari)
+
+electric - BOOL || (TINYINT(1)) - NOT_NULL;
+
+gas - BOOL || (TINYINT(1)) - NOT_NULL;
+
+diesel - BOOL || (TINYINT(1)) - NOT_NULL;
+
+methane - BOOL || (TINYINT(1)) - NOT_NULL;
+
+hybrid - BOOL || (TINYINT(1)) - NOT_NULL;
+
+color - VARCHAR(40) - NOT_NULL;
+
+component_description - TEXT - NOT_NULL;  ( Descrizione eventuale nel dettaglio della macchina )
+
+purchase_price - VARCHAR(10) - NOT_NULL;  ( Non credo che un auto arrivi a costare 9.999.999.999 in qualsiasi valuta)
+
+selling_price - BIGINT - NOT_NULL;  ( secondo la mia ricerca l'auto più costosa al mondo al momento è la Ferrari 250 GTO venduta per 80 Milioni di dollari, quindi ho dovuto mettere un BIGINT anche per eventuali calcoli furuti sul prezzo di vendita )
+
+
+
+
+
+
+
+
+
+
+
+
